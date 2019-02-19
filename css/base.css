@@ -1,0 +1,13 @@
+/*========== reset css  ==========*/
+*,
+*::before,
+*::after{
+    /*所有的标签和伪元素都选择*/
+    margin: 0;
+    padding: 0;
+    /*移动端中经常使用 防止内容移除 不出现滚动条 提高用户体验*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*移动端点击高亮颜色  transparent为透明色（取消点击高亮）*/
+    -webkit-tap-highlight-color: transparent;
+}

@@ -159,7 +159,7 @@ body{
 .jd_product_box {
     margin-top: 10px;
     background: #fff;
-    min-height: 200px;
+    min-height: 180px;
 }
 .jd_product_box .tit{
     height: 34px;
@@ -185,6 +185,7 @@ body{
 /*秒杀*/
 .sk .tit.nb {
     display: flex;
+    position: relative;
 }
 .sk .icon{
     width: 16px;
@@ -216,7 +217,46 @@ body{
     width: 3px;
     color: #333;
 }
+
 .sk .more{
     position: absolute;
     right: 10px;
+    background: red;
+}
+.sk .sk_content {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+}
+.sk .sk_content .sk_item {
+    flex: 33.333333%;
+    border-right: 1px solid #ddd;
+
+}
+.sk .sk_content .sk_item:nth-child(3n) {
+
+    border-right: none;
+
+}
+.sk .sk_content .sk_item img{
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 64%;
+    margin: 0 auto;
+
+}
+.sk .sk_content .sk_item span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.sk .sk_content .sk_item .newPlace{
+    margin-top: 10px;
+    color: #d8505c;
+}
+.sk .sk_content .sk_item .oldPlace{
+    color: #333;
+    text-decoration: line-through;
+
 }

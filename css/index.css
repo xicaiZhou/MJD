@@ -124,14 +124,11 @@ body{
     width: 100%;
     background: #fff;
     padding-bottom: 10px;
-
-
 }
 .jd_nav ul{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-
 }
 .jd_nav ul li{
     flex: 25%;
@@ -153,4 +150,73 @@ body{
     font-size: 12px;
     text-align: center;
     margin-top: 8px;
+}
+/*产品区块*/
+.jd_product {
+    padding: 0 5px;
+    width: 100%;
+}
+.jd_product_box {
+    margin-top: 10px;
+    background: #fff;
+    min-height: 200px;
+}
+.jd_product_box .tit{
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ddd;
+}
+.jd_product_box .tit.nb {
+    border-bottom: none;
+}
+.jd_product_box .tit .con{
+    padding-left: 23px;
+    position: relative;
+}
+.tit .con::before{
+    content: "";
+    width: 3px;
+    height: 12px;
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    background: #d8505c;
+}
+/*秒杀*/
+.sk .tit.nb {
+    display: flex;
+}
+.sk .icon{
+    width: 16px;
+    height: 20px;
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    background: url("../images/seckill-icon.png") no-repeat center / 16px 20px;
+
+}
+.sk .conFirst {
+    margin-left: 5px;
+    color: #d8505c;
+}
+.sk .time {
+    margin-left: 10px;
+}
+.sk .time span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+    background: #333;
+}
+.sk .time span:nth-child(3n){
+    background: #fff;
+    width: 3px;
+    color: #333;
+}
+.sk .more{
+    position: absolute;
+    right: 10px;
 }

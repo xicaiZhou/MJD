@@ -1,13 +1,13 @@
 
-
+body{
+    background: #f5f5f5;
+}
 /*版心*/
 .jd_container {
     min-width: 320px;
     max-width: 640px;
     width: 100%;
     margin: 0 auto;
-    background: pink;
-    height: 1000px;
 }
 /*顶部搜索*/
 .jd_search {
@@ -68,7 +68,6 @@
     position: absolute;
     left: 80px;
     top: 10px;
-    background: pink;
     background: url("../images/sprites.png") no-repeat -60px -110px / 200px 200px;
 
 }
@@ -117,4 +116,41 @@
 }
 .jd_banner ul:last-child li.now{
     background: #fff;
+}
+
+
+/*导航栏*/
+.jd_nav {
+    width: 100%;
+    background: #fff;
+    padding-bottom: 10px;
+
+
+}
+.jd_nav ul{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+.jd_nav ul li{
+    flex: 25%;
+    padding-top: 10px;
+}
+.jd_nav ul li a{
+    display: block;
+    width: 100%;
+}
+.jd_nav ul li a img{
+    display: block; /*改成块级元素*/
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+.jd_nav ul li a span{
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
 }

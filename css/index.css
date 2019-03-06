@@ -24,7 +24,7 @@ body{
     margin: 0 auto;
     width: 100%;
     height: 40px;
-    background: rgba(201,21,25,0.5);
+    background: rgba(201,21,25,0);
     position: relative;
 }
 .jd_search .jd_search_box .icon_logo {
@@ -81,6 +81,8 @@ body{
     list-style-type: none;
     width: 1000%;
     display: flex;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
 
 }
 .jd_banner ul:first-child li{
@@ -117,6 +119,7 @@ body{
 .jd_banner ul:last-child li.now{
     background: #fff;
 }
+
 
 
 /*导航栏*/
@@ -159,7 +162,7 @@ body{
 .jd_product_box {
     margin-top: 10px;
     background: #fff;
-    min-height: 180px;
+    /*min-height: 180px;*/
 }
 .jd_product_box .tit{
     height: 34px;
@@ -221,7 +224,6 @@ body{
 .sk .more{
     position: absolute;
     right: 10px;
-    background: red;
 }
 .sk .sk_content {
     margin-top: 10px;
@@ -258,5 +260,23 @@ body{
 .sk .sk_content .sk_item .oldPlace{
     color: #333;
     text-decoration: line-through;
+}
 
+.superMarket .content {
+    width: 100%;
+    display: flex;
+}
+.superMarket .content .left,.right{
+    flex: 50%;
+}
+.superMarket .content img{
+    display: block;
+    width: 100%;
+}
+.superMarket .content .left{
+    border-right: 1px solid #ddd;
+}
+
+.superMarket .content .right .first {
+    border-bottom: 1px solid #ddd;
 }

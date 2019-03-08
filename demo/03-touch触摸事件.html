@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+1.touch是移动端的触摸事件
+2，touchstart   手指开始触摸屏幕
+3.touchmove     手指在屏幕上移动
+4.touchend      手指离开屏幕
+5.touchcancel   touch事件被迫中止（来电话）
+-->
+
+<!--
+使用touch：
+1.绑定事件
+2.了解事件对象
+   TouchesList ------触摸点（一个手指就是一个触摸点）的集合；
+   changedTouches  -------改变后的触摸点的集合
+   targetTouches  -------当前元素触摸点集合
+   Touches  ------屏幕上触摸点的集合
+3.触摸点集合能否记录界面上所有的触摸点
+   changedTouches 每个事件都会记录
+   targetTouches, touches 在离开屏幕的时候无法记录
+
+-->
+
+<div class="box"></div>
+<script>
+    var divBox = document.querySelector('.box');
+
+    divBox.addEventListener('touchstart', function (e) {
+        console.log('start');
+        console.log(e);
+    });
+    divBox.addEventListener('touchmove', function (e) {
+        console.log('move');
+    });
+    divBox.addEventListener('touchend', function (e) {
+        console.log('end');
+    })
+</script>
+
+</body>
+</html>

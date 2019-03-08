@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+    window.onload = function () {
+        
+        /* 1、理解移动端手势事件*/
+        /* 2、swipe swipeLeft swipeRight swipeTop swipeBottom*/
+        
+        var ismove = false;
+        var startx = 0;
+        var distancex = 0;
+        var bingswipeEvent = function (dom, leftcallback, rightcallback) {
+            
+            dom.addEventListener('touchstart', function (e) {
+               
+                startx = e.touches[0].clientX;
+            });
+            dom.addEventListener('touchmove', function (e) {
+                distancex = e.touches[0].clientX - startx;
+                ismove = true;
+            });
+            dom.addEventListener('touchend', function (e) {
+                
+                if (ismove && Math.abs(distancex) > 50){
+                    if (distancex > 0){
+                        rightcallback && rightcallback.call(this);
+                    } else {
+                        leftcallback && leftcallback.call(this)
+                    }
+                }
+            });
+            
+            
+            
+        };
+        var box = document.querySelector('.box');
+
+        bingswipeEvent(box, function (e) {
+            console.log(e);
+            console.log(this);
+            console.log('左划手势')
+        },function (e) {
+            console.log(e);
+            console.log(this);
+            console.log('右划手势')
+
+        });
+        
+
+    }
+    
+</script>
+</body>
+</html>
